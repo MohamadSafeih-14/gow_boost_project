@@ -1,0 +1,458 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+
+body {
+    background-color: #020512;
+    overflow-x: hidden;
+}
+
+.bg-nature {
+    background-image: url(../../public/images/nature_4k_hd_league_of_legends_wild_rift-t2\ 1.png) ;
+    background-position: center center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    opacity: 0.15;
+}
+/*
+.bg-boosting {
+  position: relative;
+}
+
+.bg-boosting::after {
+  content: '';
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  background-image: url(../../public/images/edc86a280cdc7ea5294dd584499e0f66\ 1.jpg);
+  z-index: 1;
+  /* Set the opacity for the background image */
+  /* opacity: 1; Change this value for opacity */
+  /* background-size: cover; */
+/* } */
+
+
+.glow-text {
+    text-shadow: 0 0 20px #00A3FF; /* Adjust the color and shadow size for the desired effect */
+}
+.glow-text-yellow {
+    text-shadow: 0 0  20px #f8ac13; /* Adjust the color and shadow size for the desired effect */
+}
+.glow-text-white {
+    text-shadow: 0 0  20px #fff; /* Adjust the color and shadow size for the desired effect */
+}
+
+
+.yellow-glow {
+    box-shadow: 0px 0px 25px 8px #ffaa006b;
+}
+
+.blue-glow {
+    box-shadow: 0px 0px 25px 8px #0072b46b;
+}
+.light-blue-glow {
+    box-shadow: 0px 0px 30px 8px #00c7f462;
+}
+.white-glow {
+    box-shadow: 0px 0px 30px 8px #ffffff34;
+}
+.blue-glow-button {
+    box-shadow: 0px 0px 35px 5px #0072b46b;
+}
+
+.menu-toggle {
+  flex-direction: column;
+  justify-content: space-around;
+  width: 35px;
+  height: 34px;
+  background: transparent;
+  border: none;
+  cursor: pointer;
+  padding: 0;
+  box-sizing: border-box;
+}
+  
+.line {
+  width: 100%;
+  height: 3px;
+  background-color: white; /* Adjust color as needed */
+  transition: transform 0.3s ease, opacity 0.3s ease;
+}
+
+.open .line:nth-child(1) {
+  transform: translateY(11px) rotate(45deg);
+}
+
+.open .line:nth-child(2) {
+  opacity: 0;
+}
+
+.open .line:nth-child(3) {
+  transform: translateY(-11px) rotate(-45deg);
+}
+
+
+.unselectable {
+    user-select: none;
+}
+  
+
+.shadow-buttons {
+  box-shadow: 0px 5px 15px 3px rgba(0, 0, 0, 0.726);
+}
+.shadow-buttons-2 {
+  box-shadow: 0px 5px 15px 3px rgba(0, 0, 0, 0.569);
+}
+
+
+.next-switch-checked {
+  background-color: black;
+}
+
+.bg-default-200 {
+  background-color: rgb(60, 60, 60) !important;
+}
+
+
+.group[data-selected=true] .group-data-\[selected\=true\]\:bg-primary {
+  background-color: rgb(25, 188, 33) !important;
+}
+
+.box-shadow {
+    box-shadow: 0px 0px 25px 3px #020512;
+
+}
+
+
+div .dashboard-grid {
+  display: grid;
+  grid-template-columns: 2fr 1.5fr;
+  grid-template-rows: 1fr 3fr;
+  grid-template-areas: "summer imgs" "design1 design2";
+  grid-gap: 50px;
+}
+
+
+@media (max-width: 1350px) {
+  div .dashboard-grid {
+    display: grid;
+    grid-template-columns: auto;
+    grid-template-rows: 0.3fr 0.3fr 1.5fr 1fr;
+    grid-template-areas: "summer " "imgs" "design1 " "design2";
+    grid-gap: 20px;
+  }
+}
+
+
+
+
+
+.summer {
+  grid-area: 'summer';
+}
+
+.imgs {
+  grid-area: 'imgs';
+}
+
+.design1 {
+  grid-area: 'design1'
+}
+
+.design2 {
+  grid-area: 'design2'
+}
+
+
+.h-profile {
+  color: #00C8F4;
+}
+
+
+.empty{
+  width: 100%;
+  height: fit-content;
+  background-color: #020512;
+}
+
+
+.emy {
+  color: white;
+  background-color: blue;
+}
+
+
+
+
+.terms-container h1  {
+  font-weight: bold;
+  color: white;
+  padding: 20px 0;
+  font-size: 2em;
+}
+
+.terms-container h2 {
+  font-weight: bold;
+  color: white;
+  padding: 20px 0;
+  font-size: 1.4em;
+}
+
+
+.terms-container h3 {
+  font-weight: bold;
+  color: white;
+  padding: 20px 0;
+  font-size: 1.3em;
+}
+
+.terms-container p {
+  color: rgb(126, 126, 126);
+  padding: 10px 0;
+}
+
+.terms-container {
+  padding-top: 100px;
+  width: 80%;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.terms-container a {
+  color: white;
+  font-size: 1.2em;
+  font-weight: bold;
+  display: block;
+  padding: 15px 0;
+  width: 150px;
+}
+
+.cl-userButton-root {
+  display: inline-block;
+}
+
+
+.cl-userButton-root div {
+  width: 50px;
+  height: 50px;
+}
+
+.cl-internal-wkkub3 {
+  display: none !important;
+}
+
+.cl-userButtonPopoverCard {
+  background-color: #020512;
+  color: white;
+  padding: 50px 10px 20px 10px;
+}
+
+.cl-userButtonPopoverActionButtonText {
+  color: white;
+}
+
+.cl-userButtonPopoverActionButtonIcon {
+  color: white;
+}
+
+.cl-userPreviewMainIdentifier {
+  font-size: 20px;
+  text-transform: capitalize;
+}
+
+
+.cl-internal-b3fm6y {
+  display: none;
+}
+
+.cl-internal-17ydaof {
+  height: 35rem;
+  width: 35rem;
+}
+
+.sign-up .cl-internal-17ydaof {
+  height: 45rem;
+  width: 35rem;
+}
+
+.cl-internal-1vbdq0x {
+  font-size: 40px;
+}
+
+.cl-internal-n0ak4e span,
+.cl-internal-n0ak4e a {
+  font-size: 17px;
+}
+
+.cl-internal-1fsg6zy {
+  font-size: 1em;
+  font-weight: 400;
+}
+
+.cl-internal-1xpzc82 {
+  font-size: 1em;
+}
+
+.cl-internal-7pl8hj {
+  font-size: 1.1em;
+}
+
+
+.chat-form ::placeholder {
+  color: gray;
+}
+
+
+ /* width */
+.messages ::-webkit-scrollbar {
+  width: 10px;
+}
+
+/* Track */
+.messages ::-webkit-scrollbar-track {
+  background: #0d1124;
+}
+
+/* Handle */
+.messages ::-webkit-scrollbar-thumb {
+  background: #D19638;
+}
+
+/* Handle on hover */
+.messages_bst ::-webkit-scrollbar-thumb:hover {
+  background: #a87523;
+}
+
+
+ /* width */
+.messages-bst ::-webkit-scrollbar {
+  width: 10px;
+}
+
+/* Track */
+.messages-bst ::-webkit-scrollbar-track {
+  background: #0d1124;
+}
+
+/* Handle */
+.messages-bst ::-webkit-scrollbar-thumb {
+  background: #02A4FF !important; 
+}
+
+/* Handle on hover */
+.messages-bst ::-webkit-scrollbar-thumb:hover {
+  background: #02A4FF !important;
+}
+
+
+.change-border > div{
+  border-radius: 15px;
+  border: 1px solid #a4a4a4 !important;
+}
+
+.change-border div{
+  border: none;
+  outline: none;
+}
+
+
+polyline[stroke-linecap="round"] {
+  color: white !important;
+}
+
+.fade-in {
+  opacity: 0;
+  transition: opacity 1s ease;
+}
+
+.fade-in-active {
+  opacity: 1;
+}
+
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+.animate-fadeIn {
+  animation-name: fadeIn;
+  animation-duration: 1s;
+  animation-timing-function: ease-in-out;
+}
+
+
+
+.faq-hover {
+  box-shadow: #04092200 0px 22px 70px 4px;
+  transition: 0.4s;
+}
+
+.faq-hover:hover {
+  box-shadow: #070f38 0px 0px 70px 6px;
+}
+
+.duo {
+  width: 200px;
+  height: 100px;
+  background-color: #3498db;
+  clip-path: polygon(20% 0, 100% 0, 100% 100%, 0 100%); 
+}
+
+
+.solo {
+  width: 200px;
+  height: 100px;
+  background-color: #3498db;
+  clip-path: polygon(0 0, 100% 0, 80% 100%, 0 100%);
+}
+
+
+
+div:has(section[role="dialog"]) {
+  z-index: 1000000;
+}
+
+div[class="z-50 backdrop-blur-md backdrop-saturate-150 bg-overlay/30 w-screen h-screen fixed inset-0"] {
+  z-index: 100000;
+}
+
+
+
+@keyframes scale-fade {
+  0% {
+    transform: scale(1);
+    opacity: 1;
+  }
+  100% {
+    transform: scale(2);
+    opacity: 0;
+  }
+}
+
+.animate-pulse-scale-fade {
+  animation: scale-fade 1.5s infinite;
+}
+
+
+.hover-blue-glow {
+  transition: 0.3s;
+}
+
+.hover-blue-glow:hover {
+  box-shadow: 0px 0px 25px 8px #0072b46b;
+}
+
+.Toastify {
+  position: fixed;
+  z-index: 10000000000;
+}
+
+
