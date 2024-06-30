@@ -1,4 +1,4 @@
-import { currentUser } from "@clerk/nextjs"
+import { currentUser } from "@clerk/nextjs/server"
 import { connectToDatabase } from "../database/mongoose"; 
 import User from "../database/models/user.model";
 

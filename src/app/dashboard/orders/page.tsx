@@ -1,4 +1,4 @@
-import { auth, currentUser } from '@clerk/nextjs';
+import { auth, currentUser } from '@clerk/nextjs/server';
 import { redirect } from 'next/navigation';
 import React from 'react'
 import User from 'src/lib/database/models/user.model';

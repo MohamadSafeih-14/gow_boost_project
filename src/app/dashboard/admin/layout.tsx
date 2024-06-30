@@ -2,7 +2,7 @@
 import React from 'react'
 import DashboardNavbar from 'src/components/dashboard/Admin/DashboardNavbar';
 import { redirect } from 'next/navigation';
-import { auth, currentUser} from '@clerk/nextjs';
+import { auth, currentUser} from '@clerk/nextjs/server';
 import { connectToDatabase } from 'src/lib/database/mongoose';
 import Admin from 'src/lib/database/models/admins.model';
 interface Props {}

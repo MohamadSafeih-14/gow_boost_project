@@ -1,5 +1,5 @@
 /* eslint-disable camelcase */
-import { auth, currentUser } from "@clerk/nextjs";
+import { auth, currentUser } from "@clerk/nextjs/server";
 import { NextResponse } from "next/server";
 import { handleSuccessPayment } from "src/actions/order";
 import { createOrder } from "src/lib/actions/order.actions";

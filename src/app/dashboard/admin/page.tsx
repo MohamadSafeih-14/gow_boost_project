@@ -1,7 +1,7 @@
 "use server";
 import React, { FC } from 'react'
 import { redirect } from 'next/navigation';
-import { auth, currentUser} from '@clerk/nextjs';
+import { auth, currentUser} from '@clerk/nextjs/server';
 import { connectToDatabase } from 'src/lib/database/mongoose';
 import Admin from 'src/lib/database/models/admins.model';import Details from 'src/components/dashboard/Admin/Home/Details';
 import Boosters from 'src/components/dashboard/Admin/Home/Boosters';

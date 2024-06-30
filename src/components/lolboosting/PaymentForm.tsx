@@ -1,4 +1,4 @@
-import { currentUser } from '@clerk/nextjs';
+import { currentUser } from '@clerk/nextjs/server';
 import { toast } from 'react-toastify';
 import { handleCheckout } from 'src/actions/checkoutStripe'
 import { handlepayment } from 'src/actions/order';

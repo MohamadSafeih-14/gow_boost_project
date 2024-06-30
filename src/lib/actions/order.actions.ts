@@ -5,7 +5,7 @@ import Order from "../database/models/order.model";
 import { connectToDatabase } from "../database/mongoose";
 import { handleError } from "../utils";
 import User from "../database/models/user.model";
-import { currentUser } from "@clerk/nextjs";
+import { currentUser } from "@clerk/nextjs/server";
 import { getUserById } from "./user.actions";
 import Booster from '../database/models/booster.model';
 import Room from "../database/models/room.model"; 

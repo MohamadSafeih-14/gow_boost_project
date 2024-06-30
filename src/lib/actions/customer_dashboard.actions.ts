@@ -1,5 +1,5 @@
 "use server"
-import { currentUser } from "@clerk/nextjs";
+import { currentUser } from "@clerk/nextjs/server";
 import User from "../database/models/user.model";
 import { connectToDatabase } from "../database/mongoose"
 import { NextResponse } from "next/server";
