@@ -1,7 +1,7 @@
 'use server'
 import React from 'react'
 import { redirect } from 'next/navigation';
-import { auth, currentUser, clerkClient} from '@clerk/nextjs';
+import { auth, currentUser, clerkClient} from '@clerk/nextjs/server';
 import Order from 'src/lib/database/models/order.model';
 import Booster from 'src/lib/database/models/booster.model';
 import { connectToDatabase } from 'src/lib/database/mongoose';

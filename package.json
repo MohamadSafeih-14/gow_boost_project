@@ -4,13 +4,13 @@
   "private": true,
   "scripts": {
     "dev": "next dev",
-    "build": "next build",
-    "start": "next start",
+    "build": "npm run buildn",
+    "start": "npm run dev",
     "lint": "next lint",
     "test": "jest --watch"
   },
   "dependencies": {
-    "@clerk/nextjs": "^4.31.1",
+    "@clerk/nextjs": "^5.1.6",
     "@nextui-org/react": "^2.2.9",
     "@reduxjs/toolkit": "^2.2.1",
     "@stripe/stripe-js": "^3.0.7",

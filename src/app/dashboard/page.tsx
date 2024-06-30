@@ -1,5 +1,5 @@
 import React, { FC } from 'react'
-import { auth, currentUser } from '@clerk/nextjs';
+import { auth, currentUser } from '@clerk/nextjs/server';
 import { redirect } from 'next/navigation';
 import User from 'src/lib/database/models/user.model';
 import Booster from 'src/lib/database/models/booster.model';

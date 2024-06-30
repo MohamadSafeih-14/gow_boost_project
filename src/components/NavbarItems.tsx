@@ -1,17 +1,18 @@
 "use client";
-import React, { FC } from 'react'
+import React from 'react'
 import Image from 'next/image';
 import { useState } from 'react';
 import { Link, Button } from '@nextui-org/react';
 import gowLogo from '../../public/images/G_5 3.png';
-import menuBar from '../../public/images/icons8-burger-bar-64.png';
-import NavbarMobileButton from './NavbarDesktopButton';
 import { usePathname } from 'next/navigation'
-import NavbarDesktopButton from './NavbarDesktopButton';
-import { UserButton } from "@clerk/nextjs";
+import {
+  SignInButton,
+  SignedIn,
+  SignedOut,
+  UserButton
+} from '@clerk/nextjs'
 
-
-const NavbarItems = ({userId}: {userId: string}) => {
+const NavbarItems = () => {
   
 
     const [isMenuOpen, setIsMenuOpen] = useState(false);
@@ -64,15 +65,25 @@ const NavbarItems = ({userId}: {userId: string}) => {
           </li>
           <li>
             <div className='mt-[20px] max-md:block hidden'>
-              {userId ? 
-              <a className='w-[150px] h-[40px] block mx-auto mb-6'><UserButton afterSignOutUrl='/sign-in'/></a>
+              <SignedOut>
+                <SignInButton>
+                <Button className='text-xl text-white bg-[#0073B4] w-[150px] max-sm:w-[100px] max-sm:text-lg blue-glow mb-5'>
+                      login
+                  </Button>
+                </SignInButton>
+              </SignedOut>
+              <SignedIn>
+                <a className='w-[150px] h-[40px] block mx-auto mb-6'><UserButton/></a>
+              </SignedIn>
+              {/* {userId ? 
+              <a className='w-[150px] h-[40px] block mx-auto mb-6'><UserButton/></a>
                : 
                   <Link href='/sign-in'>
                   <Button className='text-xl text-white bg-[#0073B4] w-[150px] max-sm:w-[100px] max-sm:text-lg blue-glow mb-5'>
                       login
                   </Button>
-              </Link>}
-              {userId ? <Link href='/dashboard'>
+              </Link>} */}
+              {/* {userId ? <Link href='/dashboard'>
                 <Button className='text-xl text-white bg-[#FFA800] w-[150px] max-sm:w-[100px] max-sm:text-lg yellow-glow'>
                   Dashboard
                 </Button>
@@ -80,7 +91,7 @@ const NavbarItems = ({userId}: {userId: string}) => {
                 <Button className='text-xl text-white bg-[#FFA800] w-[150px] max-sm:w-[100px] max-sm:text-lg yellow-glow'>
                   Contact
                 </Button>
-              </Link>}
+              </Link>} */}
 
             </div>
           </li>
@@ -116,7 +127,22 @@ const NavbarItems = ({userId}: {userId: string}) => {
             <div className='flex flex-row items-end '>
               {/* Contact and Discord buttons for mobile */}
               <div className='mt-[20px] max-md:hidden flex flex-row items-end h-fit'>
-                {userId ? <Link href='/dashboard/' className='mb-2'>
+              <SignedOut>
+                <SignInButton>
+                <Button className='text-xl text-white bg-[#0073B4] w-[150px] max-sm:w-[100px] max-sm:text-lg blue-glow mb-5'>
+                      login
+                  </Button>
+                </SignInButton>
+              </SignedOut>
+              <SignedIn>
+                <a className='w-[150px] h-[40px] block mx-auto mb-6'><UserButton/></a>
+                <Link href='/dashboard/' className='mb-2'>
+                <Button className='text-xl text-white bg-[#FFA800] w-[150px] yellow-glow mr-5'>
+                  dashboard
+                </Button>
+              </Link>
+              </SignedIn>
+                {/* {userId ? <Link href='/dashboard/' className='mb-2'>
                 <Button className='text-xl text-white bg-[#FFA800] w-[150px] yellow-glow mr-5'>
                   dashboard
                 </Button>
@@ -132,7 +158,7 @@ const NavbarItems = ({userId}: {userId: string}) => {
                   Login
                 </Button>
               </Link>
-            }
+            } */}
       </div>
     
               {/* Menu toggle button */}

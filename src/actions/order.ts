@@ -1,5 +1,5 @@
 "use server"
-import { currentUser } from '@clerk/nextjs';
+import { currentUser } from '@clerk/nextjs/server';
 import { NextResponse } from 'next/server';
 import { handleCheckout } from './checkoutStripe';
 import { getUserById } from 'src/lib/actions/user.actions';

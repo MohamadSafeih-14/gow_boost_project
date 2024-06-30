@@ -1,6 +1,6 @@
 import React from 'react'
 import Boosting from 'src/components/dashboard/Boosting'
-import { auth, clerkClient, currentUser } from '@clerk/nextjs';
+import { auth, clerkClient, currentUser } from '@clerk/nextjs/server';
 import Order from 'src/lib/database/models/order.model';
 import User from 'src/lib/database/models/user.model';
 import { redirect } from 'next/navigation';
