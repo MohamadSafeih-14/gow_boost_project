@@ -9,18 +9,21 @@ import stripe from "stripe";
 export async function POST(request: Request) {
   const body = await request.text();
   const sig = request.headers.get("stripe-signature") as string || '';
-  const endpointSecret = process.env.NEXT_STRIPE_WEBHOOK_SECRET!;
+  const endpointSecret = process.env.STRIPE_WEBHOOK_SECRET!;
   
   let event;
   try {
     event = stripe.webhooks.constructEvent(body, sig, endpointSecret);
+    console.log(event)
   } catch (err) {
-    return NextResponse.json({ message: "Webhook error", error: err });
+    console.log(err)
+    return NextResponse.json({ message: "Webhook error1", error: err });
   }
   // Get the ID and type
   const eventType = event.type;
   // CREATE
   if (eventType === "checkout.session.completed") {
+    console.log("HH")
     const {starting_rank, starting_division, ending_rank, ending_division, server, lp, boosting_type, addons, price, userId} = event.data.object.metadata!;
     
     const order = {

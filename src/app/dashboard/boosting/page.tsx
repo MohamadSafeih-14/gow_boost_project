@@ -1,11 +1,11 @@
 import React from 'react'
-import Boosting from 'src/components/dashboard/Boosting'
+import Boosting from '../../../components/dashboard/Boosting'
 import { auth, clerkClient, currentUser } from '@clerk/nextjs/server';
-import Order from 'src/lib/database/models/order.model';
-import User from 'src/lib/database/models/user.model';
+import Order from '../../../lib/database/models/order.model';
+import User from '../../../lib/database/models/user.model';
 import { redirect } from 'next/navigation';
-import { connectToDatabase } from 'src/lib/database/mongoose';
-import Booster from 'src/lib/database/models/booster.model';
+import { connectToDatabase } from '../../../lib/database/mongoose';
+import Booster from '../../../lib/database/models/booster.model';
 const page = async () => {
   const isUserLogged =  auth();
   if (!isUserLogged) {
