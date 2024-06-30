@@ -32,7 +32,7 @@ const config: Config = {
         // ...
         colors: {
           addCommonColors: true,
-          gold: '#ff33d',
+          gold: '#ff33dd',
         },
       },
       dark: {
